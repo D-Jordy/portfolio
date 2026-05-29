@@ -10,8 +10,8 @@
             --text: #111111;
             --muted: #555555;
             --border: #e0e0e0;
-            --link: #0057d8;
-            --link-hover: #003fa3;
+            --link: #6d28d9;
+            --link-hover: #4c1d95;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -20,8 +20,8 @@
                 --text: #ebebeb;
                 --muted: #888888;
                 --border: #2a2a2a;
-                --link: #5b9cf6;
-                --link-hover: #89b8ff;
+                --link: #a78bfa;
+                --link-hover: #c4b5fd;
             }
         }
 
@@ -48,17 +48,26 @@
             width: 100%;
         }
 
+        .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+
         h1 {
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.6rem;
         }
 
         .bio {
             color: var(--muted);
-            font-size: 1rem;
+            font-size: 0.975rem;
             margin-bottom: 2rem;
+            max-width: 380px;
         }
 
         .links {
@@ -91,8 +100,19 @@
 </head>
 <body>
     <main>
+        <img
+            class="avatar"
+            src="https://avatars.githubusercontent.com/u/91130457"
+            alt="Jordy"
+            width="72"
+            height="72"
+        >
         <h1>Jordy</h1>
-        <p class="bio">Developer.</p>
+        <p class="bio">
+            Software Engineer at Van Egmond Groep, focused on expanding and maintaining internal
+            applications, automating processes, and replacing outdated solutions.
+            Studying Information Technology at HAN University part-time.
+        </p>
         <nav class="links">
             <a href="https://github.com/D-Jordy" target="_blank" rel="noopener">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
