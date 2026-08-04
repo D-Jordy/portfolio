@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects &mdash; Jordy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <a class="back" href="index.html">&larr; Jordy</a>
+        <h1>Projects</h1>
+        <p>
+            Things I build in my spare time and host on my own VPS.
+        </p>
+
+        <section>
+            <h3>Tally</h3>
+            <p>
+                I invest through DEGIRO, and DEGIRO shows you what you own and not much else. No
+                graph of your portfolio over time, no overview of when you got dividend and how
+                much of it, no yield on cost. So I built that part myself.
+            </p>
+            <p>
+                You feed it your DEGIRO CSV exports and it works out the rest:
+            </p>
+            <ul>
+                <li>portfolio value over time</li>
+                <li>dividend history, per position and total</li>
+                <li>projected dividends and yield on cost</li>
+                <li>daily price sync, everything converted to EUR</li>
+            </ul>
+            <p class="stack">Laravel &middot; Filament &middot; PostgreSQL &middot; Docker</p>
+            <p>
+                More details on <a href="https://github.com/D-Jordy/tally" target="_blank">GitHub</a>,
+                or have a look at <a href="https://tally.d-jordy.nl/" target="_blank">tally.d-jordy.nl</a>
+                if you have a DEGIRO account of your own. A demo account is on the todo list.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

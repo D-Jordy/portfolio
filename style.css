@@ -1,0 +1,169 @@
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --muted: #555555;
+    --border: #e0e0e0;
+    --link: #6d28d9;
+    --link-hover: #4c1d95;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #111111;
+        --text: #ebebeb;
+        --muted: #888888;
+        --border: #2a2a2a;
+        --link: #a78bfa;
+        --link-hover: #c4b5fd;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+main {
+    max-width: 640px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    display: block;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+}
+
+h2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+p + p {
+    margin-top: 0.75rem;
+}
+
+section {
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.links a {
+    /* thirds, so three fit per row and the leftovers wrap centered underneath */
+    flex: 0 0 calc((100% - 1.5rem) / 3);
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+svg {
+    flex-shrink: 0;
+}
+
+ul {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0.5rem 0 0.75rem;
+    padding-left: 1.1rem;
+}
+
+.stack {
+    font-size: 0.85rem;
+}
+
+.cats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+}
+
+.cats img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.back {
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* phone: photos stack instead of shrinking, links go two per row */
+@media (max-width: 600px) {
+    .cats {
+        grid-template-columns: 1fr;
+    }
+
+    .links a {
+        flex: 0 0 calc((100% - 0.75rem) / 2);
+    }
+}
